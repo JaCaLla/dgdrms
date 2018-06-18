@@ -66,3 +66,153 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+Pods/Manifest.lock
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/MBProgressHUD/LICENSE
+Pods/MBProgressHUD/MBProgressHUD.h
+Pods/MBProgressHUD/MBProgressHUD.m
+Pods/MBProgressHUD/README.mdown
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/R.swift/License
+Pods/R.swift/rswift
+Pods/R.swift.Library/License
+Pods/R.swift.Library/Readme.md
+Pods/R.swift.Library/Library/Core/ColorResource.swift
+Pods/R.swift.Library/Library/Core/Core+Migration.swift
+Pods/R.swift.Library/Library/Core/FileResource.swift
+Pods/R.swift.Library/Library/Core/FontResource.swift
+Pods/R.swift.Library/Library/Core/Identifier.swift
+Pods/R.swift.Library/Library/Core/ImageResource.swift
+Pods/R.swift.Library/Library/Core/NibResource.swift
+Pods/R.swift.Library/Library/Core/ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/Core/StoryboardResource.swift
+Pods/R.swift.Library/Library/Core/StoryboardSegueIdentifierProtocol.swift
+Pods/R.swift.Library/Library/Core/StoryboardViewControllerResource.swift
+Pods/R.swift.Library/Library/Core/StringResource.swift
+Pods/R.swift.Library/Library/Core/Validatable.swift
+Pods/R.swift.Library/Library/Foundation/Bundle+FileResource.swift
+Pods/R.swift.Library/Library/Foundation/Data+FileResource.swift
+Pods/R.swift.Library/Library/Foundation/Foundation+Migration.swift
+Pods/R.swift.Library/Library/UIKit/ColorResource+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/NibResource+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift
+Pods/R.swift.Library/Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/UIKit/UIFont+FontResource.swift
+Pods/R.swift.Library/Library/UIKit/UIImage+ImageResource.swift
+Pods/R.swift.Library/Library/UIKit/UIKit+Migration.swift
+Pods/R.swift.Library/Library/UIKit/UINib+NibResource.swift
+Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardResource.swift
+Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift
+Pods/R.swift.Library/Library/UIKit/UITableView+ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/UIKit/UIViewController+NibResource.swift
+Pods/R.swift.Library/Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift
+Pods/SwiftLint/file.zip
+Pods/SwiftLint/LICENSE
+Pods/SwiftLint/swiftlint
+Pods/SwiftLint/SwiftLintFramework.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/SwiftLintFramework
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/SwiftLintFramework
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftCore.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftCoreGraphics.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftDarwin.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftDispatch.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftFoundation.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftIOKit.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/libswiftObjectiveC.dylib
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Commandant.framework/Commandant
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Commandant.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Commandant.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Commandant.framework/Versions/A/Commandant
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Commandant.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Result.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Result.framework/Result
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Result.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Result.framework/Versions/A/Result
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Result.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SourceKittenFramework.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SourceKittenFramework.framework/SourceKittenFramework
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SourceKittenFramework.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SourceKittenFramework.framework/Versions/A/SourceKittenFramework
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SourceKittenFramework.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SwiftyTextTable.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SwiftyTextTable.framework/SwiftyTextTable
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SwiftyTextTable.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SwiftyTextTable.framework/Versions/A/SwiftyTextTable
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SwiftyTextTable.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SWXMLHash.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SWXMLHash.framework/SWXMLHash
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SWXMLHash.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SWXMLHash.framework/Versions/A/SWXMLHash
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/SWXMLHash.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yaml.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yaml.framework/Yaml
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yaml.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yaml.framework/Versions/A/Yaml
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yaml.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yams.framework/Resources
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yams.framework/Yams
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yams.framework/Versions/Current
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yams.framework/Versions/A/Yams
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Frameworks/Yams.framework/Versions/A/Resources/Info.plist
+Pods/SwiftLint/SwiftLintFramework.framework/Versions/A/Resources/Info.plist
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/Alamofire/Info.plist
+Pods/Target Support Files/MBProgressHUD/Info.plist
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-dummy.m
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-umbrella.h
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD.modulemap
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD.xcconfig
+Pods/Target Support Files/Pods-dgdrms/Info.plist
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms-acknowledgements.markdown
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms-acknowledgements.plist
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms-dummy.m
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms-frameworks.sh
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms-resources.sh
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms-umbrella.h
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms.debug.xcconfig
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms.modulemap
+Pods/Target Support Files/Pods-dgdrms/Pods-dgdrms.release.xcconfig
+Pods/Target Support Files/Pods-dgdrmsTests/Info.plist
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests-acknowledgements.plist
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests-dummy.m
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests-frameworks.sh
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests-resources.sh
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests-umbrella.h
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests.debug.xcconfig
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests.modulemap
+Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests.release.xcconfig
+Pods/Target Support Files/R.swift.Library/Info.plist
+Pods/Target Support Files/R.swift.Library/R.swift.Library-dummy.m
+Pods/Target Support Files/R.swift.Library/R.swift.Library-prefix.pch
+Pods/Target Support Files/R.swift.Library/R.swift.Library-umbrella.h
+Pods/Target Support Files/R.swift.Library/R.swift.Library.modulemap
+Pods/Target Support Files/R.swift.Library/R.swift.Library.xcconfig
+dgdrms/dgdrms.xcdatamodeld/.xccurrentversion
+dgdrms/dgdrms.xcdatamodeld/dgdrms.xcdatamodel/contents
+R.generated.swift
