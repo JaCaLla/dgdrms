@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  eShop
+
+  Created by 08APO0516 on 27/05/2018.
+  Copyright © 2018 jca. All rights reserved.
+*/
+
+"start_scanning_title" = "Comienza escaneo";
+"start_scanning_product_placeholder" = "¿Producto?";
+"start_scanning_shop_placeholder" = "¿Comercio?";
+"start_scanning_price_placeholder" = "¿Pricio?";
+"start_scanning_tap_start_scan" = "Pulsa para escanear un código e barras";
+
+"distance_selecgtor_title" = "Radio de escaneo";
+"shop_price_title" = "Precio en tienda";
+"shop_price_prices_found" = "%d precios encontrados";
+
+"product_prices_price" = "Precio";
+"product_prices_distance" = "Distancia";

@@ -1,6 +1,6 @@
 //
 //  MainFlowCoordinator.swift
-//  tempos21test
+//  dgdrms
 //
 //  Created by 08APO0516 on 18/01/2018.
 //  Copyright © 2018 jca. All rights reserved.
@@ -27,12 +27,7 @@ class  MainFlowCoordinator {
         DispatchQueue.main.async {
 
             let mainVC = MainVC.instantiate(fromAppStoryboard: .main)
-            /*
-             pointsListPresenter.onSeletedDetailedPoint = { [weak self] detailedPoint in
-             guard let weakSelf = self else { return }
-             weakSelf.present(detailedPoint: detailedPoint)
-             }
-             */
+
             self.mainNC.viewControllers = [mainVC]
 
             if let appDelegate  = UIApplication.shared.delegate as? AppDelegate,
@@ -43,10 +38,5 @@ class  MainFlowCoordinator {
             }
         }
     }
-    /*
-     func present(detailedPoint:Point) {
-     let detailPointPresenter = DetailPointPresenter.instantiate(fromAppStoryboard: .main)
-     detailPointPresenter.detailPoint = detailedPoint
-     self.mainNC.pushViewController(detailPointPresenter, animated: true)
-     }*/
+
 }

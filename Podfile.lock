@@ -7,7 +7,7 @@ PODS:
   - SwiftLint (0.16.1)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.7.2)
   - MBProgressHUD (~> 1.1.0)
   - R.swift (~> 3.3.0)
   - SwiftLint (~> 0.16.1)
@@ -27,6 +27,6 @@ SPEC CHECKSUMS:
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
 
-PODFILE CHECKSUM: 6961ee04960524fdd2fc713ea93d9c1bbc5883ff
+PODFILE CHECKSUM: 84a78659e6e18ae84f07134b4bae5382ff78e144
 
 COCOAPODS: 1.5.3
