@@ -84,7 +84,7 @@ class UTDataManager: XCTestCase {
                 asyncExpectation.fulfill()
             }
         })
-        self.waitForExpectations(timeout: 10, handler: nil)
+        self.waitForExpectations(timeout: 20, handler: nil)
     }
 
     // MARK: - Exchage rates

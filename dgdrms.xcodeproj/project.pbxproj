@@ -13,8 +13,6 @@
 		BF110CE120DEA88800B1CBF4 /* RatesRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF110CDE20DEA88700B1CBF4 /* RatesRestService.swift */; };
 		BF110CE220DEA88800B1CBF4 /* RatesRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF110CDF20DEA88700B1CBF4 /* RatesRestClient.swift */; };
 		BF3EEB4F20DD939900953BD6 /* Bound.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB4E20DD939900953BD6 /* Bound.swift */; };
-		BF3EEB5220DDA27D00953BD6 /* CDUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5020DDA27D00953BD6 /* CDUser+CoreDataClass.swift */; };
-		BF3EEB5320DDA27D00953BD6 /* CDUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5120DDA27D00953BD6 /* CDUser+CoreDataProperties.swift */; };
 		BF3EEB5620DDA31F00953BD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5520DDA31F00953BD6 /* User.swift */; };
 		BF3EEB5920DDA53600953BD6 /* UTPersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5820DDA53600953BD6 /* UTPersistanceManager.swift */; };
 		BF3EEB5B20DE0BA800953BD6 /* UTDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5A20DE0BA800953BD6 /* UTDataManager.swift */; };
@@ -29,6 +27,8 @@
 		BF4552AD20DA27A30054AE4C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4552AC20DA27A30054AE4C /* AppEnvironment.swift */; };
 		BF62EB3D20DEB44A00D5A2BF /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62EB3C20DEB44900D5A2BF /* ExchangeRate.swift */; };
 		BF62EB3F20DEB50200D5A2BF /* UTRatesRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62EB3E20DEB50200D5A2BF /* UTRatesRestService.swift */; };
+		BFADAB1520E20BEE00CD6ED3 /* CDUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADAB1320E20BED00CD6ED3 /* CDUser+CoreDataClass.swift */; };
+		BFADAB1620E20BEE00CD6ED3 /* CDUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADAB1420E20BED00CD6ED3 /* CDUser+CoreDataProperties.swift */; };
 		BFB3DA9320D8169A009F289F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DA9220D8169A009F289F /* AppDelegate.swift */; };
 		BFB3DA9520D8169A009F289F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DA9420D8169A009F289F /* MainVC.swift */; };
 		BFB3DA9820D8169A009F289F /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB3DA9620D8169A009F289F /* main.storyboard */; };
@@ -93,8 +93,6 @@
 		BF110CDE20DEA88700B1CBF4 /* RatesRestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesRestService.swift; sourceTree = "<group>"; };
 		BF110CDF20DEA88700B1CBF4 /* RatesRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesRestClient.swift; sourceTree = "<group>"; };
 		BF3EEB4E20DD939900953BD6 /* Bound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bound.swift; sourceTree = "<group>"; };
-		BF3EEB5020DDA27D00953BD6 /* CDUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDUser+CoreDataClass.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDUser+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		BF3EEB5120DDA27D00953BD6 /* CDUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDUser+CoreDataProperties.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDUser+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BF3EEB5520DDA31F00953BD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF3EEB5820DDA53600953BD6 /* UTPersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTPersistanceManager.swift; sourceTree = "<group>"; };
 		BF3EEB5A20DE0BA800953BD6 /* UTDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTDataManager.swift; sourceTree = "<group>"; };
@@ -109,6 +107,8 @@
 		BF4552AC20DA27A30054AE4C /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		BF62EB3C20DEB44900D5A2BF /* ExchangeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		BF62EB3E20DEB50200D5A2BF /* UTRatesRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRatesRestService.swift; sourceTree = "<group>"; };
+		BFADAB1320E20BED00CD6ED3 /* CDUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDUser+CoreDataClass.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDUser+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		BFADAB1420E20BED00CD6ED3 /* CDUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDUser+CoreDataProperties.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDUser+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BFB3DA8F20D8169A009F289F /* dgdrms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dgdrms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3DA9220D8169A009F289F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB3DA9420D8169A009F289F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -242,12 +242,12 @@
 		BF45529320DA27490054AE4C /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				BFADAB1320E20BED00CD6ED3 /* CDUser+CoreDataClass.swift */,
+				BFADAB1420E20BED00CD6ED3 /* CDUser+CoreDataProperties.swift */,
 				BFDF753A20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift */,
 				BFDF753920DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift */,
 				BF110CD720DE619600B1CBF4 /* CDCurrency+CoreDataClass.swift */,
 				BF110CD820DE619600B1CBF4 /* CDCurrency+CoreDataProperties.swift */,
-				BF3EEB5020DDA27D00953BD6 /* CDUser+CoreDataClass.swift */,
-				BF3EEB5120DDA27D00953BD6 /* CDUser+CoreDataProperties.swift */,
 				BF45529620DA27490054AE4C /* CDPoint+CoreDataProperties.swift */,
 				BF45529720DA27490054AE4C /* CDPoint+CoreDataClass.swift */,
 				BF45529820DA27490054AE4C /* PersistanceManager.swift */,
@@ -796,20 +796,20 @@
 				BFB3DADD20D83181009F289F /* StartUpAppSequencer.swift in Sources */,
 				BF4552A420DA274A0054AE4C /* DataManager.swift in Sources */,
 				BF110CDA20DE619600B1CBF4 /* CDCurrency+CoreDataProperties.swift in Sources */,
-				BF3EEB5220DDA27D00953BD6 /* CDUser+CoreDataClass.swift in Sources */,
 				BFB3DADC20D83181009F289F /* PresentMainAppOperation.swift in Sources */,
 				BF110CD920DE619600B1CBF4 /* CDCurrency+CoreDataClass.swift in Sources */,
 				BF4552AA20DA274A0054AE4C /* FlightsRestClient.swift in Sources */,
 				BF110CE220DEA88800B1CBF4 /* RatesRestClient.swift in Sources */,
 				BFDF753B20DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift in Sources */,
+				BFADAB1620E20BEE00CD6ED3 /* CDUser+CoreDataProperties.swift in Sources */,
 				BFDF753C20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift in Sources */,
 				BF3EEB4F20DD939900953BD6 /* Bound.swift in Sources */,
 				BFC5AC0920DD873700737544 /* FlightsRestResponse.swift in Sources */,
 				BF3EEB5620DDA31F00953BD6 /* User.swift in Sources */,
-				BF3EEB5320DDA27D00953BD6 /* CDUser+CoreDataProperties.swift in Sources */,
 				BF4552AD20DA27A30054AE4C /* AppEnvironment.swift in Sources */,
 				BFE6C45D20DE5D2500593DE7 /* ArrayExtension.swift in Sources */,
 				BF62EB3D20DEB44A00D5A2BF /* ExchangeRate.swift in Sources */,
+				BFADAB1520E20BEE00CD6ED3 /* CDUser+CoreDataClass.swift in Sources */,
 				BFB3DACE20D82969009F289F /* MainNC.swift in Sources */,
 				BFDF754720E03A6B0015054D /* Destinations.swift in Sources */,
 				BFB3DA9B20D8169A009F289F /* dgdrms.xcdatamodeld in Sources */,

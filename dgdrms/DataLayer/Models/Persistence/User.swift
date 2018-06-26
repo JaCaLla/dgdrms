@@ -10,19 +10,25 @@ import Foundation
 
 struct User {
 
-    var name      = ""
-    var surename           = ""
-
+    var name             = ""
+    var surename         = ""
+    var dateOfBirth:Date = Date()
+    var currency         = ""
+/*
     struct JSONKey {
-        static let name       = "name"
-        static let surename            = "surename"
+        static let name             = "name"
+        static let surename         = "surename"
     }
-
+*/
     init(name: String,
-         surename: String) {
+         surename: String,
+         dateOfBirth:Date,
+         currency:String) {
 
-        self.name         = name
-        self.surename              = surename
+        self.name           = name
+        self.surename       = surename
+        self.dateOfBirth    = dateOfBirth
+        self.currency       = currency
     }
 
 }

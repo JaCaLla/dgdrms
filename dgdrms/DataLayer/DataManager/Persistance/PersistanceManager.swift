@@ -78,7 +78,9 @@ class  PersistanceManager {
             let users:[User] = cdUser.map {
                 let cdUser:CDUser = $0 as! CDUser
                 let _user = User(name: cdUser.name!,
-                                 surename: cdUser.surename!)
+                                 surename: cdUser.surename!,
+                                 dateOfBirth: cdUser.dateOfBirth! as Date,
+                                 currency: cdUser.currency!)
                 return _user
             }
             onComplete(users[0])

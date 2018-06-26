@@ -1,13 +1,14 @@
 //
 //  CDUser+CoreDataProperties.swift
+//  
 //
-//
-//  Created by 08APO0516 on 22/06/2018.
+//  Created by 08APO0516 on 26/06/2018.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension CDUser {
 
@@ -17,5 +18,7 @@ extension CDUser {
 
     @NSManaged public var name: String?
     @NSManaged public var surename: String?
+    @NSManaged public var dateOfBirth: NSDate?
+    @NSManaged public var currency: String?
 
 }

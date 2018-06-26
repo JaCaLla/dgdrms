@@ -30,7 +30,12 @@ class UTPersistanceManager: XCTestCase {
             
             XCTAssertEqual(PersistanceManager.shared.isUserSet(),false)
             XCTAssertEqual(PersistanceManager.shared.getUserCount(), 0)
-            let user = User(name: "1", surename: "2")
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            var someDateTime = formatter.date(from: "2016/10/08 22:31")
+    
+            let user = User(name: "1", surename: "2", dateOfBirth: someDateTime!,currency: "ABC" )
             PersistanceManager.shared.set(user: user) {
                 XCTAssertEqual(PersistanceManager.shared.isUserSet(),true)
                 XCTAssertEqual(PersistanceManager.shared.getUserCount(), 1)
@@ -43,8 +48,15 @@ class UTPersistanceManager: XCTestCase {
                     }
                     XCTAssertEqual(_user.name, "1")
                     XCTAssertEqual(_user.surename, "2")
+                    let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: _user.dateOfBirth)
+                    XCTAssertEqual(components.year, 2016)
+                    XCTAssertEqual(components.month, 10)
+                    XCTAssertEqual(components.day, 8)
                     
-                    let user = User(name: "a", surename: "b")
+                     XCTAssertEqual(_user.currency, "ABC")
+                    
+                    someDateTime = formatter.date(from: "2003/11/18 22:31")
+                    let user = User(name: "a", surename: "b", dateOfBirth: someDateTime!,currency: "XYZ" )
                     PersistanceManager.shared.set(user: user) {
                         XCTAssertEqual(PersistanceManager.shared.isUserSet(),true)
                         XCTAssertEqual(PersistanceManager.shared.getUserCount(), 1)
@@ -57,6 +69,12 @@ class UTPersistanceManager: XCTestCase {
                             }
                             XCTAssertEqual(_user.name, "a")
                             XCTAssertEqual(_user.surename, "b")
+                            let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: _user.dateOfBirth)
+                            XCTAssertEqual(components.year, 2003)
+                            XCTAssertEqual(components.month, 11)
+                            XCTAssertEqual(components.day, 18)
+                            
+                            XCTAssertEqual(_user.currency, "XYZ")
                             asyncExpectation.fulfill()
                         })
                     }
