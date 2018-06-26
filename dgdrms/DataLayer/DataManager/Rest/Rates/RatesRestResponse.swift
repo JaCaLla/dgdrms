@@ -105,4 +105,3 @@ class RatesRestResponseInternal: RatesRestResponse {
      return self.responseCode == ResponseCode.accountAlreadyExist
      }*/
 }
-

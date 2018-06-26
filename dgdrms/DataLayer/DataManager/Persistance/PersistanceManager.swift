@@ -12,7 +12,7 @@ import CoreData
 class  PersistanceManager {
 
     static let shared =  PersistanceManager()
-    
+
     // MARK: - Private attributes
     private struct Entity {
         static let  user = "CDUser"
@@ -21,7 +21,7 @@ class  PersistanceManager {
     }
 
     private let persistentContainerName = "dgdrms"
-    
+
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: persistentContainerName)
         container.loadPersistentStores { ( storeDescription, error) in
@@ -36,15 +36,15 @@ class  PersistanceManager {
     private init() {} //This prevents others from using the default '()' initializer for this class.
 
     func reset() {
-       self.resetUser()
-       self.resetCurrencies()
-       self.resetExchangeRate()
+        self.resetUser()
+        self.resetCurrencies()
+        self.resetExchangeRate()
     }
-    
+
     // MARK: - User
     func resetUser() {
         let context = persistentContainer.viewContext
-        
+
         let deleteFetchUser = NSFetchRequest<NSFetchRequestResult>(entityName: Entity.user)
         let deleteRequestUser = NSBatchDeleteRequest(fetchRequest: deleteFetchUser)
         do {
@@ -54,22 +54,22 @@ class  PersistanceManager {
             print ("There was an error")
         }
     }
-    
+
     func set(user:User, onComplete: () -> Void ) {
-        
+
         guard isUserSet() == false else {
             resetUser()
             set(user: user, onComplete: onComplete)
             return
         }
-        
+
         let context = persistentContainer.viewContext
         let cdUser = CDUser(entity: CDUser.entity(), insertInto: context)
         cdUser.set(user:user)
         saveContext()
         onComplete()
     }
-    
+
     func getUser(onComplete: (User?) -> Void) {
         let context = persistentContainer.viewContext
         do {
@@ -78,7 +78,7 @@ class  PersistanceManager {
             let users:[User] = cdUser.map {
                 let cdUser:CDUser = $0 as! CDUser
                 let _user = User(name: cdUser.name!,
-                                   surename: cdUser.surename!)
+                                 surename: cdUser.surename!)
                 return _user
             }
             onComplete(users[0])
@@ -87,12 +87,12 @@ class  PersistanceManager {
             onComplete(nil)
         }
     }
-    
+
     func isUserSet() -> Bool {
-        
+
         return getUserCount() == 1
     }
-    
+
     func getUserCount() -> Int {
         let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Entity.user)
@@ -103,11 +103,11 @@ class  PersistanceManager {
             return 0
         }
     }
-    
+
     // MARK: - Currencies
     func resetCurrencies() {
         let context = persistentContainer.viewContext
-        
+
         let deleteFetchUser = NSFetchRequest<NSFetchRequestResult>(entityName: Entity.currency)
         let deleteRequestUser = NSBatchDeleteRequest(fetchRequest: deleteFetchUser)
         do {
@@ -117,7 +117,7 @@ class  PersistanceManager {
             print ("There was an error")
         }
     }
-    
+
     func getCurrencyCount() -> Int {
         let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Entity.currency)
@@ -128,7 +128,7 @@ class  PersistanceManager {
             return 0
         }
     }
-    
+
     func getCurrencies(onComplete: ([Currency]) -> Void) {
         let context = persistentContainer.viewContext
         do {
@@ -144,12 +144,12 @@ class  PersistanceManager {
             onComplete([])
         }
     }
-    
+
     func set(currencies:[Currency], onComplete: @escaping () -> Void ) {
         self.resetCurrencies()
         self.add(currencies: currencies, onComplete: onComplete)
     }
-    
+
     private func add(currency:Currency, onComplete: () -> Void ) {
         let context = persistentContainer.viewContext
         let cdCurrency = CDCurrency(entity: CDCurrency.entity(), insertInto: context)
@@ -157,21 +157,21 @@ class  PersistanceManager {
         saveContext()
         onComplete()
     }
-    
+
     private func add(currencies:[Currency], onComplete: @escaping () -> Void ) {
-        
+
         guard let _firstCurrency = currencies.first  else { onComplete(); return }
-            
+
         let _pendingCurrencies = Array(currencies[1..<currencies.count])
         self.add(currency:_firstCurrency,onComplete: {
             self.add(currencies:_pendingCurrencies,onComplete:onComplete)
         })
     }
-    
+
     // MARK: - Exchange rates
     func resetExchangeRate() {
         let context = persistentContainer.viewContext
-        
+
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: Entity.exchangeRate)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
         do {
@@ -181,7 +181,7 @@ class  PersistanceManager {
             print ("There was an error")
         }
     }
-    
+
     func set(exchangeRate:ExchangeRate, onComplete: () -> Void ) {
         let context = persistentContainer.viewContext
         let cdExchangeRate = CDExchangeRate(entity: CDExchangeRate.entity(), insertInto: context)
@@ -189,7 +189,7 @@ class  PersistanceManager {
         saveContext()
         onComplete()
     }
-    
+
     func get(from:String,to:String, onComplete: (ExchangeRate?) -> Void) {
         let context = persistentContainer.viewContext
         do {
@@ -206,7 +206,7 @@ class  PersistanceManager {
             print ("fetch task failed", error)
         }
     }
-    
+
     // MARK: - Point
     func add(point:Point, onComplete: () -> Void ) {
         let context = persistentContainer.viewContext
@@ -215,13 +215,13 @@ class  PersistanceManager {
         saveContext()
         onComplete()
     }
-    
+
     func add(points:[Point], onComplete: @escaping () -> Void ) {
-        
+
         if let _firstPoint = points.first {
-            
+
             let _pendingCustomRecipes = Array(points[1..<points.count])
-            
+
             self.add(point:_firstPoint,onComplete: {
                 self.add(points:_pendingCustomRecipes,onComplete:onComplete)
             })
@@ -229,7 +229,7 @@ class  PersistanceManager {
             onComplete()
         }
     }
-    
+
     func update(source:Point,destination:Point, onComplete: (Bool) -> Void) {
         let context = persistentContainer.viewContext
         do {
@@ -248,8 +248,6 @@ class  PersistanceManager {
             print ("fetch task failed", error)
         }
     }
-
-    
 
     func isEmpty() -> Bool {
 
@@ -318,7 +316,5 @@ class  PersistanceManager {
             }
         }
     }
-    
-    
 
 }

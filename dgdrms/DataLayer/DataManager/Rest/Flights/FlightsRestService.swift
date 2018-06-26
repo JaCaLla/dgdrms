@@ -94,9 +94,9 @@ class  FlightsRestService {
             onFailed(FlightsRestResponse(responseCode:FlightsResponseCode.networkError))
         }
     }
-    
+
     func getCurrencies(onSuccess: @escaping ([Currency]) -> Void, onFailed: @escaping (FlightsRestResponse) -> Void ) {
-        
+
         let request = FlightsRouter.Flights(self.environment)
         FlightsRestClient.shared.perform(request: request, success: { response in
             onSuccess( Currency.getCurrenciesFrom(array: response as? [JSONDictionary]) )
@@ -104,7 +104,7 @@ class  FlightsRestService {
             onFailed(FlightsRestResponse(responseCode:FlightsResponseCode.networkError))
         }
     }
- 
+
     /*
      func getPoints(onSuccess: @escaping ([Point]) -> Void, onFailed: @escaping (Error) -> Void ) {
 

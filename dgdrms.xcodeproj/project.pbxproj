@@ -59,6 +59,11 @@
 		BFC5AC0920DD873700737544 /* FlightsRestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5AC0820DD873700737544 /* FlightsRestResponse.swift */; };
 		BFDF753B20DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF753920DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift */; };
 		BFDF753C20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF753A20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift */; };
+		BFDF754320E0245D0015054D /* UTFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF754220E0245D0015054D /* UTFlight.swift */; };
+		BFDF754520E0390E0015054D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF754420E0390E0015054D /* Destination.swift */; };
+		BFDF754720E03A6B0015054D /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF754620E03A6B0015054D /* Destinations.swift */; };
+		BFDF754920E03BF10015054D /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF754820E03BF10015054D /* Origin.swift */; };
+		BFDF754D20E04B9F0015054D /* UTDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF754C20E04B9F0015054D /* UTDestinations.swift */; };
 		BFE6C45D20DE5D2500593DE7 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6C45C20DE5D2500593DE7 /* ArrayExtension.swift */; };
 		F0BD9DB7B91E5963C2EBF211 /* Pods_dgdrmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DF09D080DE7B5B7F901A48 /* Pods_dgdrmsTests.framework */; };
 		FF3A4D08A75EE4C21D0558A0 /* Pods_dgdrms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A4830C888038A962DAA679 /* Pods_dgdrms.framework */; };
@@ -139,6 +144,11 @@
 		BFC5AC0820DD873700737544 /* FlightsRestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRestResponse.swift; sourceTree = "<group>"; };
 		BFDF753920DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDExchangeRate+CoreDataProperties.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDExchangeRate+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BFDF753A20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDExchangeRate+CoreDataClass.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDExchangeRate+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		BFDF754220E0245D0015054D /* UTFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTFlight.swift; sourceTree = "<group>"; };
+		BFDF754420E0390E0015054D /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		BFDF754620E03A6B0015054D /* Destinations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
+		BFDF754820E03BF10015054D /* Origin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
+		BFDF754C20E04B9F0015054D /* UTDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTDestinations.swift; sourceTree = "<group>"; };
 		BFE6C45C20DE5D2500593DE7 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		FE773199ED5802723FA9E7E6 /* Pods-dgdrmsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dgdrmsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dgdrmsTests/Pods-dgdrmsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +268,9 @@
 		BF45529C20DA27490054AE4C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFDF754620E03A6B0015054D /* Destinations.swift */,
+				BFDF754420E0390E0015054D /* Destination.swift */,
+				BFDF754820E03BF10015054D /* Origin.swift */,
 				BF3EEB5420DDA30D00953BD6 /* Persistence */,
 				BFC5AC0020DD787E00737544 /* Rest */,
 				BF45529D20DA27490054AE4C /* Point.swift */,
@@ -503,8 +516,8 @@
 		BFC5ABFC20DD75E800737544 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				BF3EEB5720DDA4DD00953BD6 /* Persistance */,
-				BFC5ABFD20DD75FE00737544 /* Rest */,
+				BFDF754120E024330015054D /* Models */,
+				BFDF754020E024170015054D /* DataManager */,
 				BF3EEB5A20DE0BA800953BD6 /* UTDataManager.swift */,
 			);
 			path = DataLayer;
@@ -536,6 +549,32 @@
 				BFE6C45C20DE5D2500593DE7 /* ArrayExtension.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		BFDF754020E024170015054D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				BF3EEB5720DDA4DD00953BD6 /* Persistance */,
+				BFC5ABFD20DD75FE00737544 /* Rest */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		BFDF754120E024330015054D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFDF754B20E04ABF0015054D /* Rest */,
+				BFDF754C20E04B9F0015054D /* UTDestinations.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFDF754B20E04ABF0015054D /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				BFDF754220E0245D0015054D /* UTFlight.swift */,
+			);
+			path = Rest;
 			sourceTree = "<group>";
 		};
 		F43CAE52BEB5A8F5EDE6320B /* Pods */ = {
@@ -772,6 +811,7 @@
 				BFE6C45D20DE5D2500593DE7 /* ArrayExtension.swift in Sources */,
 				BF62EB3D20DEB44A00D5A2BF /* ExchangeRate.swift in Sources */,
 				BFB3DACE20D82969009F289F /* MainNC.swift in Sources */,
+				BFDF754720E03A6B0015054D /* Destinations.swift in Sources */,
 				BFB3DA9B20D8169A009F289F /* dgdrms.xcdatamodeld in Sources */,
 				BFB3DB0620D8394C009F289F /* FontsDgdrms.swift in Sources */,
 				BFB3DA9520D8169A009F289F /* MainVC.swift in Sources */,
@@ -785,12 +825,14 @@
 				BFB3DA9320D8169A009F289F /* AppDelegate.swift in Sources */,
 				BFB3DABB20D81BBA009F289F /* R.generated.swift in Sources */,
 				BFB3DB0520D8394C009F289F /* ColorsDgdrms.swift in Sources */,
+				BFDF754520E0390E0015054D /* Destination.swift in Sources */,
 				BF4552A820DA274A0054AE4C /* PersistanceManager.swift in Sources */,
 				BFB3DADE20D83181009F289F /* PointsUseCase.swift in Sources */,
 				BFB3DADA20D83181009F289F /* MainFlowCoordinator.swift in Sources */,
 				BFB3DB0320D8394C009F289F /* Strings.swift in Sources */,
 				BFB3DAE120D831BD009F289F /* AppStoryboard.swift in Sources */,
 				BF4552AB20DA274A0054AE4C /* Point.swift in Sources */,
+				BFDF754920E03BF10015054D /* Origin.swift in Sources */,
 				BF110CE120DEA88800B1CBF4 /* RatesRestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,6 +845,8 @@
 				BFC5ABFF20DD762900737544 /* UTFlightRestService.swift in Sources */,
 				BF3EEB5920DDA53600953BD6 /* UTPersistanceManager.swift in Sources */,
 				BFB3DAAB20D8169C009F289F /* dgdrmsTests.swift in Sources */,
+				BFDF754D20E04B9F0015054D /* UTDestinations.swift in Sources */,
+				BFDF754320E0245D0015054D /* UTFlight.swift in Sources */,
 				BF62EB3F20DEB50200D5A2BF /* UTRatesRestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,6 +38,20 @@ class UTDataManager: XCTestCase {
         
         self.waitForExpectations(timeout: 10, handler: nil)
     }
+    
+    // MARK: - Destinations
+    func test_getDestinations() {
+        let asyncExpectation = expectation(description: "\(#function)")
+        
+        DataManager.shared.getDestinations(userCurrency: "EUR", onSuccess: { destinations in
+            print("todo")
+            asyncExpectation.fulfill()
+        }) {
+            XCTFail()
+            asyncExpectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 20+9999, handler: nil)
+    }
 
     // MARK: - Currencies
     func test_getCurrencies() {
@@ -76,6 +90,36 @@ class UTDataManager: XCTestCase {
     // MARK: - Exchage rates
     func test_getExchangeRates() {
         let asyncExpectation = expectation(description: "\(#function)")
+        DataManager.shared.getExchangeRates(to: "EUR") { exchangeRates in
+            
+            XCTAssertEqual(exchangeRates.keys.count, 4)
+            XCTAssertTrue(exchangeRates["EUR"] != 0)
+            XCTAssertTrue(exchangeRates["JPY"] != 0)
+            XCTAssertTrue(exchangeRates["USD"] != 0)
+            XCTAssertTrue(exchangeRates["GBP"] != 0)
+            
+            asyncExpectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func test_buildExchangeRates() {
+        let asyncExpectation = expectation(description: "\(#function)")
+        let currencies =  [Currency(coin: "EUR"),Currency(coin: "GBP"),Currency(coin: "JPY"),Currency(coin: "USD")]
+        DataManager.shared.buildExchangeRates(to: "EUR", currencies: currencies) { exchangeRates in
+           
+            XCTAssertTrue(exchangeRates["EUR"] != 0)
+            XCTAssertTrue(exchangeRates["JPY"] != 0)
+            XCTAssertTrue(exchangeRates["USD"] != 0)
+            XCTAssertTrue(exchangeRates["GBP"] != 0)
+            
+            asyncExpectation.fulfill()
+        }
+         self.waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func test_getExchangeRate() {
+        let asyncExpectation = expectation(description: "\(#function)")
         
         XCTAssertEqual(DataManager.shared.exchageRateCached.keys.count, 0)
         PersistanceManager.shared.get(from: "EUR", to: "USD") { exchangeRate in
@@ -110,34 +154,6 @@ class UTDataManager: XCTestCase {
 
         }
         
-        
-        /*
-        PersistanceManager.shared.getCurrencies(onComplete: { currencies in
-            XCTAssertEqual(currencies, [])
-            DataManager.shared.getCurrencies(onSuccess: { currencies in
-                XCTAssertEqual(currencies, [Currency(coin: "EUR"),Currency(coin: "GBP"),Currency(coin: "JPY"),Currency(coin: "USD")])
-                XCTAssertEqual(DataManager.shared.currenciesCached, [Currency(coin: "EUR"),Currency(coin: "GBP"),Currency(coin: "JPY"),Currency(coin: "USD")])
-                PersistanceManager.shared.getCurrencies(onComplete: { currencies in
-                    XCTAssertEqual(currencies, [Currency(coin: "EUR"),Currency(coin: "GBP"),Currency(coin: "JPY"),Currency(coin: "USD")])
-                    
-                    DataManager.shared.currenciesCached = []
-                    
-                    DataManager.shared.getCurrencies(onSuccess: { currencies in
-                        XCTAssertEqual(currencies, [Currency(coin: "EUR"),Currency(coin: "GBP"),Currency(coin: "JPY"),Currency(coin: "USD")])
-                        XCTAssertEqual(DataManager.shared.currenciesCached, [Currency(coin: "EUR"),Currency(coin: "GBP"),Currency(coin: "JPY"),Currency(coin: "USD")])
-                        asyncExpectation.fulfill()
-                        
-                    }) {
-                        XCTFail()
-                        asyncExpectation.fulfill()
-                    }
-                })
-                
-            }) {
-                XCTFail()
-                asyncExpectation.fulfill()
-            }
-        })*/
         self.waitForExpectations(timeout: 10, handler: nil)
     }
     

@@ -1,6 +1,6 @@
 //
 //  CDUser+CoreDataProperties.swift
-//  
+//
 //
 //  Created by 08APO0516 on 22/06/2018.
 //
@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-
 
 extension CDUser {
 

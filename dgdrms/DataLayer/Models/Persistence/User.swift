@@ -9,20 +9,20 @@
 import Foundation
 
 struct User {
-    
+
     var name      = ""
     var surename           = ""
-    
+
     struct JSONKey {
         static let name       = "name"
         static let surename            = "surename"
     }
-    
+
     init(name: String,
          surename: String) {
-        
+
         self.name         = name
         self.surename              = surename
     }
-    
+
 }

@@ -27,13 +27,13 @@ enum Environment: String {
         case .production: return FlightsConstantsBaseURL.production
         }
     }
-    
+
     struct RatesConstantsBaseURL {
         static let debug = "jarvisstark.herokuapp.com"
         static let stagging = "jarvisstark.herokuapp.com"
         static let production = "jarvisstark.herokuapp.com"
     }
-    
+
     var baseURLRates: String {
         switch self {
         case .debug: return RatesConstantsBaseURL.debug

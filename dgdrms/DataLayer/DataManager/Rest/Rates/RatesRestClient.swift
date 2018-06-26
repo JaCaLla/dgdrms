@@ -81,8 +81,8 @@ class RatesRestClient {
     }
 }
 /*
-enum APIError: Error {
-    case unknownResponse
-    case invalidFormat(Any?)
-}
-*/
+ enum APIError: Error {
+ case unknownResponse
+ case invalidFormat(Any?)
+ }
+ */

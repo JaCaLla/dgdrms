@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum RatesRouter: URLRequestConvertible {
-    
+
     static let host = AppEnvironment.shared.environment.baseURLRates
     static let scheme = "https"
     static let baseURLString =  scheme + "://" + host
@@ -38,7 +38,7 @@ enum RatesRouter: URLRequestConvertible {
         case .Rate: return "/currency"
         }
     }
-    
+
     struct GetParam {
         static let from = "from"
         static let to   = "to"
@@ -47,26 +47,26 @@ enum RatesRouter: URLRequestConvertible {
     func resolveURLRequest(environment:Environment? = nil) -> URLRequest {
 
         let url = URL(string: RatesRouter.baseURLString)!
-        
+
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
-        
+
         switch self {
         case .Rate( _, let from, let to):
             var urlComponents = URLComponents()
             urlComponents.scheme = RatesRouter.scheme
             urlComponents.host = RatesRouter.host
             urlComponents.path = path
-            
+
             let fromQuery = URLQueryItem(name: GetParam.from, value: from)
             let toQuery = URLQueryItem(name: GetParam.to, value: to)
             urlComponents.queryItems = [fromQuery,toQuery]
-            
+
             var urlRequest = URLRequest(url: urlComponents.url!)
-            
+
             urlRequest.httpMethod = method.rawValue
             return urlRequest
-            
+
         default:
             return urlRequest
         }
@@ -89,45 +89,45 @@ enum RatesRouter: URLRequestConvertible {
         }
     }
     /*
-    func resolveURLRequest() -> URLRequest {
-        
-        let url = URL(string: BuyRouter.baseURLString)!
-        
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        urlRequest.httpMethod = method.rawValue
-        
-        switch self {
-        case .GetOffers:
-            var urlComponents = URLComponents()
-            urlComponents.scheme = BuyRouter.scheme
-            urlComponents.host = BuyRouter.host
-            urlComponents.path = path
-            
-            let addressQuery = URLQueryItem(name: "limit", value: "20")
-            urlComponents.queryItems = [addressQuery]
-            
-            var urlRequest = URLRequest(url: urlComponents.url!)
-            
-            urlRequest.httpMethod = method.rawValue
-            return urlRequest
-            
-        default:
-            return urlRequest
-        }
-        
-    }
-    
-    func asURLRequest() throws -> URLRequest {
-        
-        var urlRequest = resolveURLRequest()
-        
-        switch self {
-        case .GetProduct,.GetOffers:
-            urlRequest = resolveURLRequest()
-            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
-        }
-    }
-    */
+     func resolveURLRequest() -> URLRequest {
+
+     let url = URL(string: BuyRouter.baseURLString)!
+
+     var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+     urlRequest.httpMethod = method.rawValue
+
+     switch self {
+     case .GetOffers:
+     var urlComponents = URLComponents()
+     urlComponents.scheme = BuyRouter.scheme
+     urlComponents.host = BuyRouter.host
+     urlComponents.path = path
+
+     let addressQuery = URLQueryItem(name: "limit", value: "20")
+     urlComponents.queryItems = [addressQuery]
+
+     var urlRequest = URLRequest(url: urlComponents.url!)
+
+     urlRequest.httpMethod = method.rawValue
+     return urlRequest
+
+     default:
+     return urlRequest
+     }
+
+     }
+
+     func asURLRequest() throws -> URLRequest {
+
+     var urlRequest = resolveURLRequest()
+
+     switch self {
+     case .GetProduct,.GetOffers:
+     urlRequest = resolveURLRequest()
+     return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
+     }
+     }
+     */
 }
 
 class  RatesRestService {
@@ -146,9 +146,8 @@ class  RatesRestService {
         self.environment = nil
     }
 
-    
     func rate(from:String,to:String,onSuccess: @escaping (ExchangeRate) -> Void, onFailed: @escaping (RatesRestResponse) -> Void ) {
-        
+
         let request = RatesRouter.Rate(self.environment,from,to)
         RatesRestClient.shared.perform(request: request, success: { response in
             if let _exchangeRate = ExchangeRate(from: from, dictionary: response as? JSONDictionary) {
@@ -161,16 +160,16 @@ class  RatesRestService {
         }
     }
     /*
-    func getCurrencies(onSuccess: @escaping ([Currency]) -> Void, onFailed: @escaping (RatesRestResponse) -> Void ) {
-        
-        let request = RatesRouter.Rates(self.environment)
-        RatesRestClient.shared.perform(request: request, success: { response in
-            onSuccess( Currency.getCurrenciesFrom(array: response as? [JSONDictionary]) )
-        }) { responseCode in
-            onFailed(RatesRestResponse(responseCode:RatesResponseCode.networkError))
-        }
-    }*/
- 
+     func getCurrencies(onSuccess: @escaping ([Currency]) -> Void, onFailed: @escaping (RatesRestResponse) -> Void ) {
+
+     let request = RatesRouter.Rates(self.environment)
+     RatesRestClient.shared.perform(request: request, success: { response in
+     onSuccess( Currency.getCurrenciesFrom(array: response as? [JSONDictionary]) )
+     }) { responseCode in
+     onFailed(RatesRestResponse(responseCode:RatesResponseCode.networkError))
+     }
+     }*/
+
     /*
      func getPoints(onSuccess: @escaping ([Point]) -> Void, onFailed: @escaping (Error) -> Void ) {
 

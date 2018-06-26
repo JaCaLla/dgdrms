@@ -9,7 +9,7 @@
 import Foundation
 
 struct Bound {
-    
+
     var airline         = ""
     var airlineImage    = ""
     var arrivalDate     = ""
@@ -18,7 +18,7 @@ struct Bound {
     var departureTime   = ""
     var destination     = ""
     var origin          = ""
-    
+
     struct JSONKey {
         static let airline          = "airline"
         static let airlineImage     = "airlineImage"
@@ -30,13 +30,32 @@ struct Bound {
         static let origin           = "origin"
     }
     
+    init(airline:String,
+         airlineImage:String,
+         arrivalDate:String,
+         arrivalTime:String,
+         departureDate:String,
+         departureTime:String,
+         destination:String,
+         origin:String) {
+        
+        self.airline = airline
+        self.airlineImage = airlineImage
+        self.arrivalDate  = arrivalDate
+        self.arrivalTime = arrivalTime
+        self.departureDate = departureDate
+        self.departureTime = departureTime
+        self.destination = destination
+        self.origin = origin
+    }
+
 }
 
-    // MARK: JSONDecodable
+// MARK: JSONDecodable
 extension Bound: JSONDecodable {
 
     init?(dictionary: JSONDictionary?) {
-        
+
         guard let _airline = dictionary?[JSONKey.airline] as? String,
             let _airlineImage = dictionary?[JSONKey.airlineImage] as? String,
             let _arrivalDate = dictionary?[JSONKey.arrivalDate] as? String,
@@ -47,7 +66,7 @@ extension Bound: JSONDecodable {
             let _origin = dictionary?[JSONKey.origin] as? String else {
                 return nil
         }
-        
+
         self.airline = _airline
         self.airlineImage = _airlineImage
         self.arrivalDate = _arrivalDate
@@ -57,5 +76,5 @@ extension Bound: JSONDecodable {
         self.destination    = _destination
         self.origin         = _origin
     }
-    
+
 }
