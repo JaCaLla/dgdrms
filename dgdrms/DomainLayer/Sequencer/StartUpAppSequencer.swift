@@ -16,10 +16,13 @@ class  StartUpAppSequencer {
 
     func start() {
         let presentMainAppOperation = PresentMainAppOperation()
+        let fetchExchangeRatesOperation = FetchExchangeRatesOperation()
 
-        let operations = [presentMainAppOperation]
+        let operations = [fetchExchangeRatesOperation,presentMainAppOperation]
 
         // Add operation dependencies
+        presentMainAppOperation.addDependency(fetchExchangeRatesOperation)
+        
         operationQueue.addOperations(operations, waitUntilFinished: false)
     }
 }

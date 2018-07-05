@@ -1,7 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--UserNC-->
+        <scene sceneID="Zak-po-sLK">
+            <objects>
+                <navigationController storyboardIdentifier="UserNC" id="gvr-LW-JOY" customClass="UserNC" customModule="dgdrms" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LbH-jX-AEP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYX-4w-G5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="15"/>
+        </scene>
+        <!--User SettingsVC-->
+        <scene sceneID="VtD-Et-gKA">
+            <objects>
+                <viewController storyboardIdentifier="UserSettingsVC" id="FmZ-ur-QvQ" customClass="UserSettingsVC" customModule="dgdrms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XfP-Vb-hYI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7e-fD-M3Z">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lQy-Eu-iEq" customClass="UserSettingsV" customModule="dgdrms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateSelectorTVC" rowHeight="150" id="M6r-DR-uCv" customClass="DateSelectorTVC" customModule="dgdrms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M6r-DR-uCv" id="7TY-cn-XPE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="B5t-iN-i3D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="551824019.68228495">
+                                                        <!--2018-06-27 20:26:59 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="B5t-iN-i3D" firstAttribute="top" secondItem="7TY-cn-XPE" secondAttribute="top" id="839-jT-K8b"/>
+                                                <constraint firstAttribute="bottom" secondItem="B5t-iN-i3D" secondAttribute="bottom" id="JOj-a1-y9v"/>
+                                                <constraint firstItem="B5t-iN-i3D" firstAttribute="leading" secondItem="7TY-cn-XPE" secondAttribute="leading" id="fWj-m8-9fi"/>
+                                                <constraint firstAttribute="trailing" secondItem="B5t-iN-i3D" secondAttribute="trailing" id="owL-RF-Rrk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pckDateSelector" destination="B5t-iN-i3D" id="CMw-o0-8EX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserSettingsTVC" id="zbU-3g-cC9" customClass="UserSettingsTVC" customModule="dgdrms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbU-3g-cC9" id="DzH-k6-8NU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXT-U3-jmt">
+                                                    <rect key="frame" x="15" y="3" width="345" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtValue" destination="KXT-U3-jmt" id="MvT-by-w1B"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencySelectorTVC" rowHeight="150" id="VtQ-Y2-ziE" customClass="CurrencySelectorTVC" customModule="dgdrms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="222" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VtQ-Y2-ziE" id="ADQ-2Q-GWg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWL-WK-FhH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="yWL-WK-FhH" secondAttribute="bottom" id="ZD2-jc-Gsz"/>
+                                                <constraint firstAttribute="trailing" secondItem="yWL-WK-FhH" secondAttribute="trailing" id="n5U-P5-LWe"/>
+                                                <constraint firstItem="yWL-WK-FhH" firstAttribute="top" secondItem="ADQ-2Q-GWg" secondAttribute="top" id="r9C-qO-eez"/>
+                                                <constraint firstItem="yWL-WK-FhH" firstAttribute="leading" secondItem="ADQ-2Q-GWg" secondAttribute="leading" id="yQJ-eM-bCd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pckCurrencySelector" destination="yWL-WK-FhH" id="Cf3-zS-5jd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tu2-E5-wvK" firstAttribute="bottom" secondItem="G7e-fD-M3Z" secondAttribute="bottom" id="B3G-Ym-p7G"/>
+                            <constraint firstItem="G7e-fD-M3Z" firstAttribute="leading" secondItem="tu2-E5-wvK" secondAttribute="leading" id="Meu-hw-iMW"/>
+                            <constraint firstItem="lQy-Eu-iEq" firstAttribute="top" secondItem="tu2-E5-wvK" secondAttribute="top" id="Sld-c3-8wk"/>
+                            <constraint firstItem="lQy-Eu-iEq" firstAttribute="leading" secondItem="tu2-E5-wvK" secondAttribute="leading" id="aA7-w4-YVr"/>
+                            <constraint firstItem="tu2-E5-wvK" firstAttribute="trailing" secondItem="lQy-Eu-iEq" secondAttribute="trailing" id="gkx-rg-IKK"/>
+                            <constraint firstItem="tu2-E5-wvK" firstAttribute="trailing" secondItem="G7e-fD-M3Z" secondAttribute="trailing" id="lps-ae-v4K"/>
+                            <constraint firstItem="G7e-fD-M3Z" firstAttribute="top" secondItem="tu2-E5-wvK" secondAttribute="top" id="t9u-Nx-0mu"/>
+                            <constraint firstItem="tu2-E5-wvK" firstAttribute="bottom" secondItem="lQy-Eu-iEq" secondAttribute="bottom" id="tSw-RY-pgv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tu2-E5-wvK"/>
+                    </view>
+                    <connections>
+                        <outlet property="userSettingsV" destination="lQy-Eu-iEq" id="bBp-fE-F13"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb7-aB-kcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.200000000000003" y="14.842578710644679"/>
+        </scene>
+    </scenes>
 </document>

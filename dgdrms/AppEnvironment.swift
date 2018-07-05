@@ -19,12 +19,26 @@ enum Environment: String {
         static let stagging = "odigeo-testios.herokuapp.com"
         static let production = "odigeo-testios.herokuapp.com"
     }
-
+    
     var baseURLFlights: String {
         switch self {
         case .debug: return FlightsConstantsBaseURL.debug
         case .staging: return FlightsConstantsBaseURL.stagging
         case .production: return FlightsConstantsBaseURL.production
+        }
+    }
+    
+    struct VehiclesConstantsBaseURL {
+        static let debug = "poi-api.mytaxi.com"
+        static let stagging = "poi-api.mytaxi.com"
+        static let production = "poi-api.mytaxi.com"
+    }
+
+    var baseURLVehicles: String {
+        switch self {
+        case .debug: return VehiclesConstantsBaseURL.debug
+        case .staging: return VehiclesConstantsBaseURL.stagging
+        case .production: return VehiclesConstantsBaseURL.production
         }
     }
 

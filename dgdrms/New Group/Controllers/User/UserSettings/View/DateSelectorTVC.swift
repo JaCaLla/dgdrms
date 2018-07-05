@@ -10,15 +10,27 @@ import UIKit
 
 class DateSelectorTVC: UITableViewCell {
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var pckDateSelector: UIDatePicker!
+    
+    // MARK: - Callback
+    var onValueChanged: (Date) -> Void = { _ in }
+    
+    // MARK: - Public attributes
+    var user:User? {
+        didSet {
+            self._refreshView()
+        }
+    }
+    
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    // MARK: - Private/Internal
+    func _refreshView() {
+        
     }
-
 }

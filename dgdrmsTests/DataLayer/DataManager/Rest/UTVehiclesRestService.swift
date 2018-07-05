@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import dgdrms
 class UTVehiclesRestService: XCTestCase {
     
     override func setUp() {
@@ -20,16 +20,26 @@ class UTVehiclesRestService: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func test_getVehicles() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let asyncExpectation = expectation(description: "\(#function)")
+        
+        let boundingBox = BoundingBox(cornerUpLeft: Coordinate(latitude: 53.394655, longitude: 9.757589),
+                                      cornerDownRight: Coordinate(latitude: 53.694865, longitude: 10.099891))
+        
+        
+        VehiclesRestService.shared.getVehicles(boundingBox: boundingBox, onSuccess: { pois in
+            guard pois.count == 111 else  { XCTFail(); asyncExpectation.fulfill(); return }
+            
+            
+            asyncExpectation.fulfill()
+        }) { _ in
+            XCTFail()
+            asyncExpectation.fulfill()
         }
+        
+        self.waitForExpectations(timeout: 10, handler: nil)
     }
     
 }

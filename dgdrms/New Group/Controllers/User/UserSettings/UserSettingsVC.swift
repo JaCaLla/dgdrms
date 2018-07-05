@@ -10,10 +10,14 @@ import UIKit
 
 class UserSettingsVC: UIViewController {
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var userSettingsV: UserSettingsV!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self._setupPresenter()
+        self._fetchUserSettings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +26,22 @@ class UserSettingsVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private/Internal
+    func _setupPresenter() {
+        self.title = R.string.localizable.user_settings_title.key.localized
     }
-    */
+    
+    func _fetchUserSettings() {
+        
+        UserUseCase.getUserSettings(onComplete: { [weak self] user, currencies in
+            DispatchQueue.main.async {
+                guard let weakSelf = self else { return }
+                weakSelf.userSettingsV.userAndCurrency = (user,currencies)
+            }
+        }) {
+            // TODO: Present native alert informing about the error.
+        }
+
+    }
 
 }

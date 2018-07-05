@@ -105,7 +105,7 @@ class FlightsRestResponseInternal: FlightsRestResponse {
      return self.responseCode == ResponseCode.accountAlreadyExist
      }*/
 }
-
+/*
 class RestResponseExternal: FlightsRestResponse {
 
     required init?(dictionary: JSONDictionary?) {
@@ -114,4 +114,4 @@ class RestResponseExternal: FlightsRestResponse {
 
         self.results = dictionary
     }
-}
+}*/

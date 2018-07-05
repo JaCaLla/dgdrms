@@ -16,8 +16,22 @@ class PresentMainAppOperation: ConcurrentOperation {
     override func main() {
         DispatchQueue.main.async {
 
-            MainFlowCoordinator.shared.start()
-            self.state = .Finished
+            DispatchQueue.main.async {
+
+                let mainTabBarController = MainTabBarController.instantiate(fromAppStoryboard: .main)
+                mainTabBarController.viewControllers = [MainFlowCoordinator.shared.start(),
+                UserCoordinator.shared.start(),
+                VehicleListCoordinator.shared.start()]
+                mainTabBarController.modalTransitionStyle = .crossDissolve
+                
+                
+                
+                let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window!.rootViewController?.present(mainTabBarController, animated: true, completion: nil)
+                
+                
+                self.state = .Finished
+            }
         }
     }
 }

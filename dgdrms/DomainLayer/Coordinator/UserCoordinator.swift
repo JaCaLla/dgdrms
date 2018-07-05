@@ -9,28 +9,28 @@
 import Foundation
 import UIKit
 
-class  MainFlowCoordinator {
+class  UserCoordinator {
 
     // MARK: - Singleton handler
-    static let shared =  MainFlowCoordinator()
+    static let shared =  UserCoordinator()
 
-    var mainNC:MainNC = MainNC.instantiate(fromAppStoryboard: .main)
+    var userNC:UserNC = UserNC.instantiate(fromAppStoryboard: .user)
 
     // MARK: - Public/Helpers
     @discardableResult func start() -> UIViewController {
 
-       return self.presentMain()
+       return self.presentUserSettings()
     }
 
     // MARK: - Private / Internal
-    func presentMain() -> UIViewController {
+    func presentUserSettings() -> UIViewController {
       //  DispatchQueue.main.async {
 
-            let mainVC = MainVC.instantiate(fromAppStoryboard: .main)
+            let userVC = UserSettingsVC.instantiate(fromAppStoryboard: .user)
 
-            self.mainNC.viewControllers = [mainVC]
+            self.userNC.viewControllers = [userVC]
 
-            return mainNC
+            return userNC
             /*
             if let appDelegate  = UIApplication.shared.delegate as? AppDelegate,
                 let window = appDelegate.window {

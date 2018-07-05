@@ -27,7 +27,7 @@
         <!--MainNC-->
         <scene sceneID="5fj-qz-ELS">
             <objects>
-                <navigationController storyboardIdentifier="MainNC" id="U7Z-YO-gyE" customClass="MainNC" customModule="tempos21test" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNC" id="U7Z-YO-gyE" customClass="MainNC" customModule="dgdrms" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="eLf-sX-qVk">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -36,6 +36,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WY7-M3-BKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-903" y="134"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="zaG-Xu-voQ">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="vMZ-jD-0WA" customClass="MainTabBarController" customModule="dgdrms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cUr-Um-7JL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7X-su-cpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2499" y="407"/>
         </scene>
     </scenes>
 </document>

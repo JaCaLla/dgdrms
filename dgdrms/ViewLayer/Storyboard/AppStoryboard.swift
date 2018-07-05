@@ -12,6 +12,8 @@ import UIKit
 enum AppStoryboard : String {
 
     case main
+    case user
+    case vehicleList
 
     var instance : UIStoryboard {
 

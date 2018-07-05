@@ -15,6 +15,11 @@ struct FontsDgdrms {
         static let TitleFont = TextStyle.h18Bold.font
     }
 
+    struct UserSetings {
+        static let UserAttributeFont      = TextStyle.h40Bold.font
+        static let PickerFont         = TextStyle.h40Bold.font
+    }
+    
     struct DistanceSelector {
         static let TitleFont = TextStyle.h18Bold.font
         static let DistanceFont = TextStyle.h18Bold.font

@@ -9,28 +9,28 @@
 import Foundation
 import UIKit
 
-class  MainFlowCoordinator {
+class  VehicleListCoordinator {
 
     // MARK: - Singleton handler
-    static let shared =  MainFlowCoordinator()
+    static let shared =  VehicleListCoordinator()
 
-    var mainNC:MainNC = MainNC.instantiate(fromAppStoryboard: .main)
+    var vehicleListNC:VehicleListNC = VehicleListNC.instantiate(fromAppStoryboard: .vehicleList)
 
     // MARK: - Public/Helpers
     @discardableResult func start() -> UIViewController {
 
-       return self.presentMain()
+       return self.presentUserSettings()
     }
 
     // MARK: - Private / Internal
-    func presentMain() -> UIViewController {
+    func presentUserSettings() -> UIViewController {
       //  DispatchQueue.main.async {
 
-            let mainVC = MainVC.instantiate(fromAppStoryboard: .main)
+            let vehicleListPresenter = VehicleListPresenter.instantiate(fromAppStoryboard: .vehicleList)
 
-            self.mainNC.viewControllers = [mainVC]
+            self.vehicleListNC.viewControllers = [vehicleListPresenter]
 
-            return mainNC
+            return vehicleListNC
             /*
             if let appDelegate  = UIApplication.shared.delegate as? AppDelegate,
                 let window = appDelegate.window {

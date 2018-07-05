@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VehicleNC: UINavigationController {
+class VehicleListNC: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

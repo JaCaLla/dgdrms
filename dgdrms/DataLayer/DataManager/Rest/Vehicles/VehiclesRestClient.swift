@@ -8,15 +8,15 @@
 import Foundation
 import Alamofire
 
-class FlightsRestClient {
+class VehiclesRestClient {
 
-    static let shared =  FlightsRestClient()
+    static let shared =  VehiclesRestClient()
 
     private init() {}
 
     func perform(request urlRequest: URLRequestConvertible,
                  success succeed : @escaping ((Any) -> Void),
-                 failure failed : @escaping ((FlightsResponseCode) -> Void)) {
+                 failure failed : @escaping ((VehiclesResponseCode) -> Void)) {
 
         print("\n↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
         print("Starting Request...")
@@ -49,17 +49,17 @@ class FlightsRestClient {
                 print("✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n")
 
                 if let resultValue = response.result.value as? JSONDictionary ,
-                    let _restResponse = FlightsRestResponseInternal(dictionary: resultValue) {
+                    let _restResponse = VehiclesRestResponseInternal(dictionary: resultValue) {
                     succeed(_restResponse.results as Any)
                 } else {
-                    FlightsRestClient.printParsingErrorIn(request: urlRequest)
-                    failed(FlightsResponseCode.badFormedJSONModel)
+                    VehiclesRestClient.printParsingErrorIn(request: urlRequest)
+                    failed(VehiclesResponseCode.badFormedJSONModel)
                 }
 
             case .failure( _ ):
 
-                FlightsRestClient.printError(response: response)
-                failed(FlightsResponseCode.networkError)
+                VehiclesRestClient.printError(response: response)
+                failed(VehiclesResponseCode.networkError)
             }
         }
     }

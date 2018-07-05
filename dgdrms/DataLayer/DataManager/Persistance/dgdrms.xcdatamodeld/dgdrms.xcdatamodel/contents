@@ -8,15 +8,24 @@
         <attribute name="rate" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="to" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="CDReservation" representedClassName=".CDReservation" syncable="YES">
+        <attribute name="departureDateDestination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureDateOrigin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureTimeDestination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureTimeOrigin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="origin" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="CDUser" representedClassName=".CDUser" syncable="YES">
-        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="currency" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="surename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surename" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="CDCurrency" positionX="-45" positionY="18" width="128" height="60"/>
         <element name="CDExchangeRate" positionX="-45" positionY="18" width="128" height="90"/>
+        <element name="CDReservation" positionX="-45" positionY="36" width="128" height="133"/>
         <element name="CDUser" positionX="-45" positionY="0" width="128" height="105"/>
     </elements>
 </model>

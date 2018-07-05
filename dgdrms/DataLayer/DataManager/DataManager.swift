@@ -31,6 +31,31 @@ class  DataManager {
         PersistanceManager.shared.reset()
     }
 
+    // MARK: - User
+    func set(user:User, onComplete: () -> Void ) {
+        
+        PersistanceManager.shared.set(user: user, onComplete: onComplete)
+    }
+    
+    func getUser(onComplete: (User?) -> Void) {
+        
+        PersistanceManager.shared.getUser(onComplete:onComplete)
+    }
+    
+    func isUserSet() -> Bool {
+        
+        return PersistanceManager.shared.isUserSet()
+    }
+    
+    // MARK: - Vehicles
+    func getVehicles(boundingBox:BoundingBox,
+                     onSuccess: @escaping ([Poi]) -> Void,
+                     onFailed: @escaping ( ) -> Void ) {
+        VehiclesRestService.shared.getVehicles(boundingBox: boundingBox, onSuccess: onSuccess) { _ in
+            onFailed()
+        }
+    }
+    
     // MARK: - Flights
     func getFlights(onSuccess: @escaping ([Flight]) -> Void, onFailed: @escaping ( ) -> Void ) {
 
@@ -42,7 +67,7 @@ class  DataManager {
     // MARK: - Destinations
     func getDestinations(userCurrency:String, onSuccess: @escaping (Destinations) -> Void, onFailed: @escaping ( ) -> Void ) {
         
-        DataManager.shared.getExchangeRates(to: "EUR") { [weak self] exchangeRates in
+        DataManager.shared.getExchangeRates(to: userCurrency) { [weak self] exchangeRates in
             guard let weakSelf = self else  { return }
             weakSelf.getFlights(onSuccess: { flights in
                 let flightsWithUserCurrency:[Flight] = flights.map {
@@ -146,41 +171,14 @@ class  DataManager {
 
     }
 
-    /*
-     func getPoints(onComplete: @escaping ([Point]) -> Void) {
-
-     guard PersistanceManager.shared.isEmpty() else {
-     PersistanceManager.shared.getPoints(onComplete: onComplete)
-     return
-     }
-
-     FlightsRestService.shared.getPoints(onSuccess: { points in
-     PersistanceManager.shared.add(points: points, onComplete: {
-     onComplete(points)
-     })
-     }) { _ in
-     onComplete([])
-     }
-     }
-
-     func getDetailedPoint(point:Point, onComplete: @escaping (Point?) -> Void ) {
-
-     PersistanceManager.shared.getDetail(point: point) { pointWithDetail in
-     if let _pointWithDetail = pointWithDetail {
-     onComplete(_pointWithDetail)
-     return
-     } else {
-     FlightsRestService.shared.getPoint(identifier: point.identifier, onSuccess: { pointFromService in
-     PersistanceManager.shared.update(source: point,
-     destination: pointFromService,
-     onComplete: { result in
-     onComplete( result ? pointFromService : nil)
-     })
-     }, onFailed: { _ in
-     onComplete(nil)
-     })
-     }
-     }
-     }
-     */
+    // MARK: - Reservations
+    func add(reservation:Reservation, onComplete: () -> Void ) {
+        
+        PersistanceManager.shared.add(reservation: reservation, onComplete: onComplete)
+    }
+    
+    func getReservations(onComplete: ([Reservation]) -> Void) {
+        
+        PersistanceManager.shared.getReservations(onComplete: onComplete)
+    }
 }

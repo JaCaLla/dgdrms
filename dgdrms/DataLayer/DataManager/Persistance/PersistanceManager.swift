@@ -18,6 +18,7 @@ class  PersistanceManager {
         static let  user = "CDUser"
         static let  currency = "CDCurrency"
         static let exchangeRate = "CDExchangeRate"
+        static let reservations = "CDReservation"
     }
 
     private let persistentContainerName = "dgdrms"
@@ -39,6 +40,7 @@ class  PersistanceManager {
         self.resetUser()
         self.resetCurrencies()
         self.resetExchangeRate()
+        self.resetReservations()
     }
 
     // MARK: - User
@@ -206,6 +208,49 @@ class  PersistanceManager {
         } catch {
             onComplete(nil)
             print ("fetch task failed", error)
+        }
+    }
+    
+    // MARK: - Reservations
+    func resetReservations() {
+        let context = persistentContainer.viewContext
+        
+        let deleteFetchReservations = NSFetchRequest<NSFetchRequestResult>(entityName: Entity.reservations)
+        let deleteRequestReservations = NSBatchDeleteRequest(fetchRequest: deleteFetchReservations)
+        do {
+            try context.execute(deleteRequestReservations)
+            try context.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
+    
+    func add(reservation:Reservation, onComplete: () -> Void ) {
+        let context = persistentContainer.viewContext
+        let cdReservation = CDReservation(entity: CDReservation.entity(), insertInto: context)
+        cdReservation.set(reservation:reservation)
+        saveContext()
+        onComplete()
+    }
+    
+    func getReservations(onComplete: ([Reservation]) -> Void) {
+        let context = persistentContainer.viewContext
+        do {
+            let cdReservations = try context.fetch(CDReservation.fetchRequest())
+            let reservations:[Reservation] = cdReservations.map {
+                let cdReservation:CDReservation = $0 as! CDReservation
+                let _reservation =  Reservation(origin: cdReservation.origin!,
+                                                destination: cdReservation.destination!,
+                                                departureDateOrigin: cdReservation.departureDateOrigin!,
+                                                departureTimeOrigin: cdReservation.departureTimeOrigin!,
+                                                departureDateDestination: cdReservation.departureDateDestination!,
+                                                departureTimeDestination: cdReservation.departureTimeDestination!)
+                return _reservation
+            }
+            onComplete(reservations)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            onComplete([])
         }
     }
 

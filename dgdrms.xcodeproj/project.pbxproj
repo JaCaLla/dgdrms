@@ -17,6 +17,12 @@
 		BF3EEB5920DDA53600953BD6 /* UTPersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5820DDA53600953BD6 /* UTPersistanceManager.swift */; };
 		BF3EEB5B20DE0BA800953BD6 /* UTDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5A20DE0BA800953BD6 /* UTDataManager.swift */; };
 		BF3EEB5D20DE11F300953BD6 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EEB5C20DE11F300953BD6 /* Currency.swift */; };
+		BF42E50420E2B04C00A79330 /* FetchExchangeRatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42E50320E2B04C00A79330 /* FetchExchangeRatesOperation.swift */; };
+		BF42E50620E2CEFC00A79330 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42E50520E2CEFC00A79330 /* MainTabBarController.swift */; };
+		BF42E50A20E2DBE200A79330 /* UserNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42E50920E2DBE200A79330 /* UserNC.swift */; };
+		BF42E50C20E2DC0A00A79330 /* user.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF42E50B20E2DC0A00A79330 /* user.storyboard */; };
+		BF42E50F20E2DD7A00A79330 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42E50E20E2DD7A00A79330 /* UserSettingsVC.swift */; };
+		BF42E51120E2DEB300A79330 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42E51020E2DEB200A79330 /* UserCoordinator.swift */; };
 		BF4552A420DA274A0054AE4C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45529220DA27490054AE4C /* DataManager.swift */; };
 		BF4552A620DA274A0054AE4C /* CDPoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45529620DA27490054AE4C /* CDPoint+CoreDataProperties.swift */; };
 		BF4552A720DA274A0054AE4C /* CDPoint+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45529720DA27490054AE4C /* CDPoint+CoreDataClass.swift */; };
@@ -25,10 +31,23 @@
 		BF4552AA20DA274A0054AE4C /* FlightsRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45529B20DA27490054AE4C /* FlightsRestClient.swift */; };
 		BF4552AB20DA274A0054AE4C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45529D20DA27490054AE4C /* Point.swift */; };
 		BF4552AD20DA27A30054AE4C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4552AC20DA27A30054AE4C /* AppEnvironment.swift */; };
+		BF56A46120E25B5C00CA0E05 /* CDReservation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56A45F20E25B5B00CA0E05 /* CDReservation+CoreDataClass.swift */; };
+		BF56A46220E25B5C00CA0E05 /* CDReservation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56A46020E25B5C00CA0E05 /* CDReservation+CoreDataProperties.swift */; };
 		BF62EB3D20DEB44A00D5A2BF /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62EB3C20DEB44900D5A2BF /* ExchangeRate.swift */; };
 		BF62EB3F20DEB50200D5A2BF /* UTRatesRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62EB3E20DEB50200D5A2BF /* UTRatesRestService.swift */; };
+		BFAAC62B20E354AC009AC130 /* UserSettingsV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC62A20E354AC009AC130 /* UserSettingsV.swift */; };
+		BFAAC62D20E354E7009AC130 /* UserSettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC62C20E354E7009AC130 /* UserSettingsTVC.swift */; };
+		BFAAC62F20E35674009AC130 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC62E20E35674009AC130 /* UserUseCase.swift */; };
+		BFAAC63120E35B90009AC130 /* FlightsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC63020E35B90009AC130 /* FlightsUseCase.swift */; };
+		BFAAC63520E35C21009AC130 /* UTUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC63420E35C21009AC130 /* UTUserUseCase.swift */; };
+		BFAAC63720E35D1A009AC130 /* DomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC63620E35D1A009AC130 /* DomainManager.swift */; };
+		BFAAC63920E3607D009AC130 /* UTFlightsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAAC63820E3607D009AC130 /* UTFlightsUseCase.swift */; };
 		BFADAB1520E20BEE00CD6ED3 /* CDUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADAB1320E20BED00CD6ED3 /* CDUser+CoreDataClass.swift */; };
 		BFADAB1620E20BEE00CD6ED3 /* CDUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADAB1420E20BED00CD6ED3 /* CDUser+CoreDataProperties.swift */; };
+		BFADAB1820E2383E00CD6ED3 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADAB1720E2383D00CD6ED3 /* Reservation.swift */; };
+		BFB25B6720EE7DDF008FCA1E /* VehiclesRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB25B6420EE7DDF008FCA1E /* VehiclesRestClient.swift */; };
+		BFB25B6820EE7DDF008FCA1E /* VehiclesRestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB25B6520EE7DDF008FCA1E /* VehiclesRestResponse.swift */; };
+		BFB25B6920EE7DDF008FCA1E /* VehiclesRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB25B6620EE7DDF008FCA1E /* VehiclesRestService.swift */; };
 		BFB3DA9320D8169A009F289F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DA9220D8169A009F289F /* AppDelegate.swift */; };
 		BFB3DA9520D8169A009F289F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DA9420D8169A009F289F /* MainVC.swift */; };
 		BFB3DA9820D8169A009F289F /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB3DA9620D8169A009F289F /* main.storyboard */; };
@@ -53,10 +72,21 @@
 		BFB3DB1620D8394C009F289F /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFB3DAFA20D8394C009F289F /* SanFranciscoDisplay-Bold.otf */; };
 		BFB3DB1C20D8394C009F289F /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFB3DB0020D8394C009F289F /* SanFranciscoDisplay-Thin.otf */; };
 		BFB3DB2120D83A50009F289F /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DB2020D83A50009F289F /* LocaleManager.swift */; };
-		BFC5ABFF20DD762900737544 /* UTFlightRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5ABFE20DD762900737544 /* UTFlightRestService.swift */; };
+		BFBF70D720E41D7C004F756F /* CurrencySelectorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF70D620E41D7C004F756F /* CurrencySelectorTVC.swift */; };
+		BFBF70D920E42A4A004F756F /* DateSelectorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF70D820E42A4A004F756F /* DateSelectorTVC.swift */; };
 		BFC5AC0220DD78B300737544 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5AC0120DD78B300737544 /* Flight.swift */; };
 		BFC5AC0720DD7E0400737544 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5AC0620DD7E0400737544 /* JSONDecodable.swift */; };
 		BFC5AC0920DD873700737544 /* FlightsRestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5AC0820DD873700737544 /* FlightsRestResponse.swift */; };
+		BFC5C40020EE82A3001BF723 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C3FF20EE82A3001BF723 /* Coordinate.swift */; };
+		BFC5C40220EE8762001BF723 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C40120EE8762001BF723 /* BoundingBox.swift */; };
+		BFC5C40420EE8916001BF723 /* Poi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C40320EE8916001BF723 /* Poi.swift */; };
+		BFC5C40A20EE8F32001BF723 /* UTVehiclesRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C40920EE8F32001BF723 /* UTVehiclesRestService.swift */; };
+		BFC5C40C20EE8F56001BF723 /* UTFlightRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C40B20EE8F56001BF723 /* UTFlightRestService.swift */; };
+		BFC5C40E20EE9C67001BF723 /* VehicleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C40D20EE9C67001BF723 /* VehicleUseCase.swift */; };
+		BFC5C41020EE9D33001BF723 /* VehicleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C40F20EE9D33001BF723 /* VehicleListCoordinator.swift */; };
+		BFC5C41A20EE9D60001BF723 /* VehicleListNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C41220EE9D60001BF723 /* VehicleListNC.swift */; };
+		BFC5C41F20EE9D60001BF723 /* VehicleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C41920EE9D60001BF723 /* VehicleListPresenter.swift */; };
+		BFC5C42120EEA0A0001BF723 /* vehicleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC5C42020EEA0A0001BF723 /* vehicleList.storyboard */; };
 		BFDF753B20DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF753920DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift */; };
 		BFDF753C20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF753A20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift */; };
 		BFDF754320E0245D0015054D /* UTFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF754220E0245D0015054D /* UTFlight.swift */; };
@@ -97,6 +127,12 @@
 		BF3EEB5820DDA53600953BD6 /* UTPersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTPersistanceManager.swift; sourceTree = "<group>"; };
 		BF3EEB5A20DE0BA800953BD6 /* UTDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTDataManager.swift; sourceTree = "<group>"; };
 		BF3EEB5C20DE11F300953BD6 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		BF42E50320E2B04C00A79330 /* FetchExchangeRatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchExchangeRatesOperation.swift; sourceTree = "<group>"; };
+		BF42E50520E2CEFC00A79330 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BF42E50920E2DBE200A79330 /* UserNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNC.swift; sourceTree = "<group>"; };
+		BF42E50B20E2DC0A00A79330 /* user.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = user.storyboard; sourceTree = "<group>"; };
+		BF42E50E20E2DD7A00A79330 /* UserSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
+		BF42E51020E2DEB200A79330 /* UserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 		BF45529220DA27490054AE4C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BF45529620DA27490054AE4C /* CDPoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF45529720DA27490054AE4C /* CDPoint+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPoint+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -105,10 +141,23 @@
 		BF45529B20DA27490054AE4C /* FlightsRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsRestClient.swift; sourceTree = "<group>"; };
 		BF45529D20DA27490054AE4C /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		BF4552AC20DA27A30054AE4C /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		BF56A45F20E25B5B00CA0E05 /* CDReservation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDReservation+CoreDataClass.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDReservation+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		BF56A46020E25B5C00CA0E05 /* CDReservation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDReservation+CoreDataProperties.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDReservation+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BF62EB3C20DEB44900D5A2BF /* ExchangeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		BF62EB3E20DEB50200D5A2BF /* UTRatesRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRatesRestService.swift; sourceTree = "<group>"; };
+		BFAAC62A20E354AC009AC130 /* UserSettingsV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsV.swift; sourceTree = "<group>"; };
+		BFAAC62C20E354E7009AC130 /* UserSettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTVC.swift; sourceTree = "<group>"; };
+		BFAAC62E20E35674009AC130 /* UserUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		BFAAC63020E35B90009AC130 /* FlightsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsUseCase.swift; sourceTree = "<group>"; };
+		BFAAC63420E35C21009AC130 /* UTUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTUserUseCase.swift; sourceTree = "<group>"; };
+		BFAAC63620E35D1A009AC130 /* DomainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainManager.swift; sourceTree = "<group>"; };
+		BFAAC63820E3607D009AC130 /* UTFlightsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTFlightsUseCase.swift; sourceTree = "<group>"; };
 		BFADAB1320E20BED00CD6ED3 /* CDUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDUser+CoreDataClass.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDUser+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		BFADAB1420E20BED00CD6ED3 /* CDUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDUser+CoreDataProperties.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDUser+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		BFADAB1720E2383D00CD6ED3 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		BFB25B6420EE7DDF008FCA1E /* VehiclesRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesRestClient.swift; sourceTree = "<group>"; };
+		BFB25B6520EE7DDF008FCA1E /* VehiclesRestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesRestResponse.swift; sourceTree = "<group>"; };
+		BFB25B6620EE7DDF008FCA1E /* VehiclesRestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesRestService.swift; sourceTree = "<group>"; };
 		BFB3DA8F20D8169A009F289F /* dgdrms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dgdrms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3DA9220D8169A009F289F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB3DA9420D8169A009F289F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -138,10 +187,21 @@
 		BFB3DAFA20D8394C009F289F /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
 		BFB3DB0020D8394C009F289F /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
 		BFB3DB2020D83A50009F289F /* LocaleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
-		BFC5ABFE20DD762900737544 /* UTFlightRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTFlightRestService.swift; sourceTree = "<group>"; };
+		BFBF70D620E41D7C004F756F /* CurrencySelectorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorTVC.swift; sourceTree = "<group>"; };
+		BFBF70D820E42A4A004F756F /* DateSelectorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorTVC.swift; sourceTree = "<group>"; };
 		BFC5AC0120DD78B300737544 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		BFC5AC0620DD7E0400737544 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		BFC5AC0820DD873700737544 /* FlightsRestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRestResponse.swift; sourceTree = "<group>"; };
+		BFC5C3FF20EE82A3001BF723 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		BFC5C40120EE8762001BF723 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		BFC5C40320EE8916001BF723 /* Poi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poi.swift; sourceTree = "<group>"; };
+		BFC5C40920EE8F32001BF723 /* UTVehiclesRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTVehiclesRestService.swift; sourceTree = "<group>"; };
+		BFC5C40B20EE8F56001BF723 /* UTFlightRestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTFlightRestService.swift; sourceTree = "<group>"; };
+		BFC5C40D20EE9C67001BF723 /* VehicleUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleUseCase.swift; sourceTree = "<group>"; };
+		BFC5C40F20EE9D33001BF723 /* VehicleListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListCoordinator.swift; sourceTree = "<group>"; };
+		BFC5C41220EE9D60001BF723 /* VehicleListNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListNC.swift; sourceTree = "<group>"; };
+		BFC5C41920EE9D60001BF723 /* VehicleListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListPresenter.swift; sourceTree = "<group>"; };
+		BFC5C42020EEA0A0001BF723 /* vehicleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = vehicleList.storyboard; sourceTree = "<group>"; };
 		BFDF753920DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDExchangeRate+CoreDataProperties.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDExchangeRate+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BFDF753A20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDExchangeRate+CoreDataClass.swift"; path = "/Users/Altran/Dropbox/ProjectsIOS/Propietary/dgdrms/dgdrms/DataLayer/DataManager/Persistance/CDExchangeRate+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		BFDF754220E0245D0015054D /* UTFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTFlight.swift; sourceTree = "<group>"; };
@@ -205,6 +265,7 @@
 		BF3EEB5420DDA30D00953BD6 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				BFADAB1720E2383D00CD6ED3 /* Reservation.swift */,
 				BF3EEB5C20DE11F300953BD6 /* Currency.swift */,
 				BF3EEB5520DDA31F00953BD6 /* User.swift */,
 			);
@@ -219,6 +280,34 @@
 			path = Persistance;
 			sourceTree = "<group>";
 		};
+		BF42E50720E2D9B500A79330 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFC5C41120EE9D60001BF723 /* VehicleList */,
+				BF42E50820E2DA3700A79330 /* User */,
+				BFB3DABC20D82969009F289F /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF42E50820E2DA3700A79330 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BF42E50D20E2DD0600A79330 /* UserSettings */,
+				BF42E50920E2DBE200A79330 /* UserNC.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BF42E50D20E2DD0600A79330 /* UserSettings */ = {
+			isa = PBXGroup;
+			children = (
+				BF42E50E20E2DD7A00A79330 /* UserSettingsVC.swift */,
+				BFAAC62920E35450009AC130 /* View */,
+			);
+			path = UserSettings;
+			sourceTree = "<group>";
+		};
 		BF45529020DA27490054AE4C /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,8 +320,8 @@
 		BF45529120DA27490054AE4C /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				BFC5AC0520DD7DEF00737544 /* Core */,
 				BF45529220DA27490054AE4C /* DataManager.swift */,
+				BFC5AC0520DD7DEF00737544 /* Core */,
 				BF45529320DA27490054AE4C /* Persistance */,
 				BF45529920DA27490054AE4C /* Rest */,
 			);
@@ -242,6 +331,8 @@
 		BF45529320DA27490054AE4C /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				BF56A45F20E25B5B00CA0E05 /* CDReservation+CoreDataClass.swift */,
+				BF56A46020E25B5C00CA0E05 /* CDReservation+CoreDataProperties.swift */,
 				BFADAB1320E20BED00CD6ED3 /* CDUser+CoreDataClass.swift */,
 				BFADAB1420E20BED00CD6ED3 /* CDUser+CoreDataProperties.swift */,
 				BFDF753A20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift */,
@@ -259,6 +350,7 @@
 		BF45529920DA27490054AE4C /* Rest */ = {
 			isa = PBXGroup;
 			children = (
+				BFB25B6320EE7DDF008FCA1E /* Vehicles */,
 				BF110CDC20DEA88700B1CBF4 /* Rates */,
 				BF110CDB20DEA64E00B1CBF4 /* Flights */,
 			);
@@ -268,6 +360,8 @@
 		BF45529C20DA27490054AE4C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFC5C40120EE8762001BF723 /* BoundingBox.swift */,
+				BFC5C3FF20EE82A3001BF723 /* Coordinate.swift */,
 				BFDF754620E03A6B0015054D /* Destinations.swift */,
 				BFDF754420E0390E0015054D /* Destination.swift */,
 				BFDF754820E03BF10015054D /* Origin.swift */,
@@ -275,7 +369,6 @@
 				BFC5AC0020DD787E00737544 /* Rest */,
 				BF45529D20DA27490054AE4C /* Point.swift */,
 				BF45529E20DA27490054AE4C /* json */,
-				BF4552A320DA27490054AE4C /* BaristaServices */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,11 +412,42 @@
 			path = Countries;
 			sourceTree = "<group>";
 		};
-		BF4552A320DA27490054AE4C /* BaristaServices */ = {
+		BFAAC62920E35450009AC130 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BFAAC62A20E354AC009AC130 /* UserSettingsV.swift */,
+				BFAAC62C20E354E7009AC130 /* UserSettingsTVC.swift */,
+				BFBF70D620E41D7C004F756F /* CurrencySelectorTVC.swift */,
+				BFBF70D820E42A4A004F756F /* DateSelectorTVC.swift */,
 			);
-			path = BaristaServices;
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFAAC63220E35BED009AC130 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BFAAC63320E35C00009AC130 /* UseCases */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		BFAAC63320E35C00009AC130 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BFAAC63420E35C21009AC130 /* UTUserUseCase.swift */,
+				BFAAC63820E3607D009AC130 /* UTFlightsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		BFB25B6320EE7DDF008FCA1E /* Vehicles */ = {
+			isa = PBXGroup;
+			children = (
+				BFB25B6420EE7DDF008FCA1E /* VehiclesRestClient.swift */,
+				BFB25B6520EE7DDF008FCA1E /* VehiclesRestResponse.swift */,
+				BFB25B6620EE7DDF008FCA1E /* VehiclesRestService.swift */,
+			);
+			path = Vehicles;
 			sourceTree = "<group>";
 		};
 		BFB3DA8620D8169A009F289F = {
@@ -364,6 +488,7 @@
 		BFB3DAA920D8169C009F289F /* dgdrmsTests */ = {
 			isa = PBXGroup;
 			children = (
+				BFAAC63220E35BED009AC130 /* DomainLayer */,
 				BFC5ABFC20DD75E800737544 /* DataLayer */,
 				BFB3DAAA20D8169C009F289F /* dgdrmsTests.swift */,
 				BFB3DAAC20D8169C009F289F /* Info.plist */,
@@ -374,8 +499,8 @@
 		BFB3DAB720D81B5C009F289F /* ViewLayer */ = {
 			isa = PBXGroup;
 			children = (
+				BF42E50720E2D9B500A79330 /* Controllers */,
 				BFB3DADF20D83193009F289F /* Storyboard */,
-				BFB3DABC20D82969009F289F /* Main */,
 				BFB3DAB820D81B65009F289F /* Resources */,
 			);
 			name = ViewLayer;
@@ -406,9 +531,10 @@
 			children = (
 				BFB3DACF20D830A3009F289F /* Main */,
 				BFB3DAC720D82969009F289F /* MainNC.swift */,
+				BF42E50520E2CEFC00A79330 /* MainTabBarController.swift */,
 			);
 			name = Main;
-			path = dgdrms/ViewLayer/Main;
+			path = "dgdrms/New Group/Controllers/Main";
 			sourceTree = SOURCE_ROOT;
 		};
 		BFB3DACF20D830A3009F289F /* Main */ = {
@@ -423,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB3DB1F20D83A3B009F289F /* Managers */,
+				BFAAC63620E35D1A009AC130 /* DomainManager.swift */,
 				BFB3DAD120D83180009F289F /* Coordinator */,
 				BFB3DAD320D83180009F289F /* Sequencer */,
 				BFB3DAD820D83180009F289F /* UseCase */,
@@ -433,6 +560,8 @@
 		BFB3DAD120D83180009F289F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BFC5C40F20EE9D33001BF723 /* VehicleListCoordinator.swift */,
+				BF42E51020E2DEB200A79330 /* UserCoordinator.swift */,
 				BFB3DAD220D83180009F289F /* MainFlowCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -451,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB3DAD520D83180009F289F /* ConcurrentOperation.swift */,
+				BF42E50320E2B04C00A79330 /* FetchExchangeRatesOperation.swift */,
 				BFB3DAD620D83180009F289F /* PresentMainAppOperation.swift */,
 			);
 			path = Operation;
@@ -459,7 +589,10 @@
 		BFB3DAD820D83180009F289F /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				BFAAC63020E35B90009AC130 /* FlightsUseCase.swift */,
+				BFAAC62E20E35674009AC130 /* UserUseCase.swift */,
 				BFB3DAD920D83181009F289F /* PointsUseCase.swift */,
+				BFC5C40D20EE9C67001BF723 /* VehicleUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -469,6 +602,8 @@
 			children = (
 				BFB3DAE020D831BD009F289F /* AppStoryboard.swift */,
 				BFB3DA9620D8169A009F289F /* main.storyboard */,
+				BFC5C42020EEA0A0001BF723 /* vehicleList.storyboard */,
+				BF42E50B20E2DC0A00A79330 /* user.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -526,7 +661,8 @@
 		BFC5ABFD20DD75FE00737544 /* Rest */ = {
 			isa = PBXGroup;
 			children = (
-				BFC5ABFE20DD762900737544 /* UTFlightRestService.swift */,
+				BFC5C40920EE8F32001BF723 /* UTVehiclesRestService.swift */,
+				BFC5C40B20EE8F56001BF723 /* UTFlightRestService.swift */,
 				BF62EB3E20DEB50200D5A2BF /* UTRatesRestService.swift */,
 			);
 			path = Rest;
@@ -535,6 +671,7 @@
 		BFC5AC0020DD787E00737544 /* Rest */ = {
 			isa = PBXGroup;
 			children = (
+				BFC5C40320EE8916001BF723 /* Poi.swift */,
 				BF62EB3C20DEB44900D5A2BF /* ExchangeRate.swift */,
 				BFC5AC0120DD78B300737544 /* Flight.swift */,
 				BF3EEB4E20DD939900953BD6 /* Bound.swift */,
@@ -549,6 +686,31 @@
 				BFE6C45C20DE5D2500593DE7 /* ArrayExtension.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		BFC5C41120EE9D60001BF723 /* VehicleList */ = {
+			isa = PBXGroup;
+			children = (
+				BFC5C41220EE9D60001BF723 /* VehicleListNC.swift */,
+				BFC5C41320EE9D60001BF723 /* VehicleList */,
+			);
+			path = VehicleList;
+			sourceTree = "<group>";
+		};
+		BFC5C41320EE9D60001BF723 /* VehicleList */ = {
+			isa = PBXGroup;
+			children = (
+				BFC5C41420EE9D60001BF723 /* View */,
+				BFC5C41920EE9D60001BF723 /* VehicleListPresenter.swift */,
+			);
+			path = VehicleList;
+			sourceTree = "<group>";
+		};
+		BFC5C41420EE9D60001BF723 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BFDF754020E024170015054D /* DataManager */ = {
@@ -677,6 +839,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF42E50C20E2DC0A00A79330 /* user.storyboard in Resources */,
+				BFC5C42120EEA0A0001BF723 /* vehicleList.storyboard in Resources */,
 				BFB3DAA020D8169C009F289F /* LaunchScreen.storyboard in Resources */,
 				BFB3DB0420D8394C009F289F /* Localizable.strings in Resources */,
 				BFB3DB1620D8394C009F289F /* SanFranciscoDisplay-Bold.otf in Resources */,
@@ -791,29 +955,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC5C41F20EE9D60001BF723 /* VehicleListPresenter.swift in Sources */,
+				BFAAC62D20E354E7009AC130 /* UserSettingsTVC.swift in Sources */,
 				BFC5AC0720DD7E0400737544 /* JSONDecodable.swift in Sources */,
+				BFBF70D920E42A4A004F756F /* DateSelectorTVC.swift in Sources */,
 				BF110CE020DEA88800B1CBF4 /* RatesRestResponse.swift in Sources */,
+				BF56A46120E25B5C00CA0E05 /* CDReservation+CoreDataClass.swift in Sources */,
 				BFB3DADD20D83181009F289F /* StartUpAppSequencer.swift in Sources */,
 				BF4552A420DA274A0054AE4C /* DataManager.swift in Sources */,
+				BFC5C41020EE9D33001BF723 /* VehicleListCoordinator.swift in Sources */,
 				BF110CDA20DE619600B1CBF4 /* CDCurrency+CoreDataProperties.swift in Sources */,
 				BFB3DADC20D83181009F289F /* PresentMainAppOperation.swift in Sources */,
 				BF110CD920DE619600B1CBF4 /* CDCurrency+CoreDataClass.swift in Sources */,
 				BF4552AA20DA274A0054AE4C /* FlightsRestClient.swift in Sources */,
 				BF110CE220DEA88800B1CBF4 /* RatesRestClient.swift in Sources */,
+				BFC5C40420EE8916001BF723 /* Poi.swift in Sources */,
 				BFDF753B20DF6A510015054D /* CDExchangeRate+CoreDataProperties.swift in Sources */,
+				BFBF70D720E41D7C004F756F /* CurrencySelectorTVC.swift in Sources */,
 				BFADAB1620E20BEE00CD6ED3 /* CDUser+CoreDataProperties.swift in Sources */,
 				BFDF753C20DF6A510015054D /* CDExchangeRate+CoreDataClass.swift in Sources */,
+				BFAAC62F20E35674009AC130 /* UserUseCase.swift in Sources */,
+				BF56A46220E25B5C00CA0E05 /* CDReservation+CoreDataProperties.swift in Sources */,
+				BFB25B6820EE7DDF008FCA1E /* VehiclesRestResponse.swift in Sources */,
 				BF3EEB4F20DD939900953BD6 /* Bound.swift in Sources */,
 				BFC5AC0920DD873700737544 /* FlightsRestResponse.swift in Sources */,
+				BFADAB1820E2383E00CD6ED3 /* Reservation.swift in Sources */,
 				BF3EEB5620DDA31F00953BD6 /* User.swift in Sources */,
 				BF4552AD20DA27A30054AE4C /* AppEnvironment.swift in Sources */,
 				BFE6C45D20DE5D2500593DE7 /* ArrayExtension.swift in Sources */,
 				BF62EB3D20DEB44A00D5A2BF /* ExchangeRate.swift in Sources */,
+				BF42E50A20E2DBE200A79330 /* UserNC.swift in Sources */,
 				BFADAB1520E20BEE00CD6ED3 /* CDUser+CoreDataClass.swift in Sources */,
+				BFAAC63720E35D1A009AC130 /* DomainManager.swift in Sources */,
 				BFB3DACE20D82969009F289F /* MainNC.swift in Sources */,
+				BFC5C40220EE8762001BF723 /* BoundingBox.swift in Sources */,
 				BFDF754720E03A6B0015054D /* Destinations.swift in Sources */,
 				BFB3DA9B20D8169A009F289F /* dgdrms.xcdatamodeld in Sources */,
 				BFB3DB0620D8394C009F289F /* FontsDgdrms.swift in Sources */,
+				BFC5C40020EE82A3001BF723 /* Coordinate.swift in Sources */,
+				BF42E50620E2CEFC00A79330 /* MainTabBarController.swift in Sources */,
+				BF42E50420E2B04C00A79330 /* FetchExchangeRatesOperation.swift in Sources */,
 				BFB3DA9520D8169A009F289F /* MainVC.swift in Sources */,
 				BF4552A920DA274A0054AE4C /* FlightsRestService.swift in Sources */,
 				BFB3DB2120D83A50009F289F /* LocaleManager.swift in Sources */,
@@ -821,18 +1002,26 @@
 				BF3EEB5D20DE11F300953BD6 /* Currency.swift in Sources */,
 				BFC5AC0220DD78B300737544 /* Flight.swift in Sources */,
 				BF4552A720DA274A0054AE4C /* CDPoint+CoreDataClass.swift in Sources */,
+				BFAAC62B20E354AC009AC130 /* UserSettingsV.swift in Sources */,
 				BF4552A620DA274A0054AE4C /* CDPoint+CoreDataProperties.swift in Sources */,
 				BFB3DA9320D8169A009F289F /* AppDelegate.swift in Sources */,
 				BFB3DABB20D81BBA009F289F /* R.generated.swift in Sources */,
 				BFB3DB0520D8394C009F289F /* ColorsDgdrms.swift in Sources */,
+				BFC5C40E20EE9C67001BF723 /* VehicleUseCase.swift in Sources */,
 				BFDF754520E0390E0015054D /* Destination.swift in Sources */,
+				BFAAC63120E35B90009AC130 /* FlightsUseCase.swift in Sources */,
 				BF4552A820DA274A0054AE4C /* PersistanceManager.swift in Sources */,
+				BF42E50F20E2DD7A00A79330 /* UserSettingsVC.swift in Sources */,
 				BFB3DADE20D83181009F289F /* PointsUseCase.swift in Sources */,
 				BFB3DADA20D83181009F289F /* MainFlowCoordinator.swift in Sources */,
+				BFB25B6920EE7DDF008FCA1E /* VehiclesRestService.swift in Sources */,
+				BF42E51120E2DEB300A79330 /* UserCoordinator.swift in Sources */,
 				BFB3DB0320D8394C009F289F /* Strings.swift in Sources */,
 				BFB3DAE120D831BD009F289F /* AppStoryboard.swift in Sources */,
+				BFB25B6720EE7DDF008FCA1E /* VehiclesRestClient.swift in Sources */,
 				BF4552AB20DA274A0054AE4C /* Point.swift in Sources */,
 				BFDF754920E03BF10015054D /* Origin.swift in Sources */,
+				BFC5C41A20EE9D60001BF723 /* VehicleListNC.swift in Sources */,
 				BF110CE120DEA88800B1CBF4 /* RatesRestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -842,12 +1031,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3EEB5B20DE0BA800953BD6 /* UTDataManager.swift in Sources */,
-				BFC5ABFF20DD762900737544 /* UTFlightRestService.swift in Sources */,
 				BF3EEB5920DDA53600953BD6 /* UTPersistanceManager.swift in Sources */,
+				BFC5C40C20EE8F56001BF723 /* UTFlightRestService.swift in Sources */,
 				BFB3DAAB20D8169C009F289F /* dgdrmsTests.swift in Sources */,
 				BFDF754D20E04B9F0015054D /* UTDestinations.swift in Sources */,
 				BFDF754320E0245D0015054D /* UTFlight.swift in Sources */,
 				BF62EB3F20DEB50200D5A2BF /* UTRatesRestService.swift in Sources */,
+				BFAAC63520E35C21009AC130 /* UTUserUseCase.swift in Sources */,
+				BFAAC63920E3607D009AC130 /* UTFlightsUseCase.swift in Sources */,
+				BFC5C40A20EE8F32001BF723 /* UTVehiclesRestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

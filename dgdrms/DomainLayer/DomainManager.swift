@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class  DomainManager {
+    
+    static let shared =  DomainManager()
+    
+    private init() {
+        //This prevents others from using the default '()' initializer for this class.
+    }
+    
+    // MARK: - Reset
+    func reset() {
+
+    }
+}
